@@ -14,6 +14,9 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.use("/api", appRouter);
+app.use(`/`, (req, res) => {
+  res.send("Welcome to the API");
+});
 
 
 db.
